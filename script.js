@@ -65,7 +65,8 @@ searchBtn.addEventListener("click", () => {
 })
 
 
-searchBox.addEventListener('keydown', e => 
-    e.key === 'Enter' ? 
+searchBox.addEventListener('keydown', e => {
+    if (e.key === 'Enter') {
         checkWeather(searchBox.value);
-    );
+    }
+});
